@@ -1,12 +1,17 @@
 package telran.game;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class gameAppl {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         numberGenerator();
+        userInput();
 
     }
 
@@ -25,6 +30,19 @@ public class gameAppl {
 
         }
         return numbers;
+    }
+
+
+    public static void userInput () throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        PrintStream printStream = System.out;
+        while (true){
+            String line = reader.readLine();
+            if (line == null){
+                break;
+            }
+//            printStream.println(line);
+        }
     }
 
 
